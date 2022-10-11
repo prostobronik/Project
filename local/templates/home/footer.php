@@ -8,9 +8,8 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="mb-5">
-              <!-- <h3 class="footer-heading mb-4">About HomeSpace</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis, minima minus odio!</p> -->
-              <?$APPLICATION->IncludeComponent(
+              <h3 class="footer-heading mb-4">About HomeSpace</h3>
+              <p><?$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
 	"",
 	Array(
@@ -19,7 +18,7 @@
 		"EDIT_TEMPLATE" => "",
 		"PATH" => "/include/adout.php"
 	)
-);?>
+);?></p>
             </div>
           </div>
 
@@ -66,16 +65,10 @@
 
           </div>
 
-          <!-- <div class="col-lg-4 mb-5 mb-lg-0">
+          <div class="col-lg-4 mb-5 mb-lg-0">
             <h3 class="footer-heading mb-4">Follow Us</h3>
                 <div>
-                  <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
-                </div>       
-          </div> -->
-          <?$APPLICATION->IncludeComponent(
+                <?$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
 	"",
 	Array(
@@ -85,7 +78,8 @@
 		"PATH" => "/include/follow.php"
 	)
 );?>
-         
+                </div>       
+          </div> 
         </div>
         <div class="row pt-5 mt-5 text-center">
           <div class="col-md-12">

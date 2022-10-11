@@ -80,18 +80,16 @@ if (!defined ('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 	)
 );?></span></a>
               
-              <!-- <a href="#"><span class="text-black fl-bigmug-line-email64"></span> <span class="d-none d-md-inline-block ml-2">info@domain.com</span></a> -->
-              <?$APPLICATION->IncludeComponent(
+              <a href="#"><span class="text-black fl-bigmug-line-email64"></span> <span class="d-none d-md-inline-block ml-2"> <?$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
-	".default",
+	"",
 	Array(
 		"AREA_FILE_SHOW" => "file",
 		"AREA_FILE_SUFFIX" => "inc",
-		"COMPONENT_TEMPLATE" => ".default",
 		"EDIT_TEMPLATE" => "",
 		"PATH" => "/include/email.php"
 	)
-);?>
+);?></span></a>
             </p>  
           </div>
           <!-- <div class="col-6 col-md-6 text-right">
@@ -118,8 +116,17 @@ if (!defined ('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         <div class="container py-1">
           <div class="row align-items-center">
             <div class="col-8 col-md-8 col-lg-4">
-            <!-- <h1 class=""><a href="index.html" class="h5 text-uppercase text-black"><strong>HomeSpace<span class="text-danger">.</span></strong></a></h1> -->
-            <?$APPLICATION->IncludeComponent(
+            <h1 class=""><a href="index.html" class="h5 text-uppercase text-black"><strong><?$APPLICATION->IncludeComponent(
+	"bitrix:main.include",
+	"",
+	Array(
+		"AREA_FILE_SHOW" => "file",
+		"AREA_FILE_SUFFIX" => "inc",
+		"EDIT_TEMPLATE" => "",
+		"PATH" => "/include/logo.php"
+	)
+);?><span class="text-danger">.</span></strong></a></h1>
+            <!-- <$APPLICATION->IncludeComponent(
 	"bitrix:main.include", 
 	".default", 
 	array(
@@ -130,7 +137,7 @@ if (!defined ('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		"COMPONENT_TEMPLATE" => ".default"
 	),
 	false
-);?>
+);?> -->
             </div>
             <div class="col-4 col-md-4 col-lg-8">
               <nav class="site-navigation text-right text-md-right" role="navigation">

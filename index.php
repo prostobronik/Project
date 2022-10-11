@@ -68,7 +68,6 @@ $APPLICATION->SetTitle("Мебельная компания");
 	false
 );?>--><br>
  <br>
- <br>
 <div class="slide-one-item home-slider owl-carousel">
 	<div class="site-blocks-cover" style="background-image: url(local/templates/home/images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
 		<div class="text">
@@ -107,35 +106,50 @@ $APPLICATION->SetTitle("Мебельная компания");
 			<div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
 				<div class="feature d-flex align-items-start">
  <span class="icon mr-3 flaticon-house"></span>
-					<?$APPLICATION->IncludeComponent(
+					<div class="text">
+						<h2 class="mt-0">Wide Range of Properties</h2>
+						<p>
+							 <?$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
-	"",
+	".default",
 	Array(
 		"AREA_FILE_SHOW" => "page",
 		"AREA_FILE_SUFFIX" => "q",
-		"EDIT_TEMPLATE" => ""
+		"COMPONENT_TEMPLATE" => ".default",
+		"EDIT_TEMPLATE" => "",
+		"PATH" => ""
 	)
 );?>
+						</p>
+					</div>
 				</div>
 			</div>
 			<div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
 				<div class="feature d-flex align-items-start">
  <span class="icon mr-3 flaticon-rent"></span>
-					<?$APPLICATION->IncludeComponent(
+					<div class="text">
+						<h2 class="mt-0">Rent or Sale</h2>
+						<p>
+							 <?$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
-	"",
+	".default",
 	Array(
 		"AREA_FILE_SHOW" => "page",
 		"AREA_FILE_SUFFIX" => "qaz",
+		"COMPONENT_TEMPLATE" => ".default",
 		"EDIT_TEMPLATE" => ""
 	)
 );?>
+						</p>
+					</div>
 				</div>
 			</div>
 			<div class="col-md-6 col-lg-4 mb-3 mb-lg-0">
 				<div class="feature d-flex align-items-start">
  <span class="icon mr-3 flaticon-location"></span>
 					<div class="text">
+               <h2 class="mt-0">Property Location</h2>
+               <p>
 						 <?$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
 	"",
@@ -144,7 +158,7 @@ $APPLICATION->SetTitle("Мебельная компания");
 		"AREA_FILE_SUFFIX" => "qwer",
 		"EDIT_TEMPLATE" => ""
 	)
-);?>
+);?></p>
 					</div>
 				</div>
 			</div>
@@ -152,9 +166,8 @@ $APPLICATION->SetTitle("Мебельная компания");
 	</div>
 </div>
  &nbsp; <br>
- <br><!--Меню верхнее-->
-
-  <!-- <$APPLICATION->IncludeComponent(
+ <br>
+ <!--Меню верхнее--> <!-- <$APPLICATION->IncludeComponent(
 	"bitrix:news.line", 
 	".default", 
 	array(
@@ -369,9 +382,7 @@ $APPLICATION->SetTitle("Мебельная компания");
 						<div class="col-md-7 text-center mb-5">
 							<h2><br>
  </h2>
- <!--Меню Сервис-->
-
-							 <?$APPLICATION->IncludeComponent(
+							 <!--Меню Сервис--> <?$APPLICATION->IncludeComponent(
 	"bitrix:news.line", 
 	".default", 
 	array(
@@ -379,6 +390,7 @@ $APPLICATION->SetTitle("Мебельная компания");
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "300",
 		"CACHE_TYPE" => "A",
+		"COMPONENT_TEMPLATE" => ".default",
 		"DETAIL_URL" => "",
 		"FIELD_CODE" => array(
 			0 => "",
@@ -391,8 +403,7 @@ $APPLICATION->SetTitle("Мебельная компания");
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
-		"SORT_ORDER2" => "ASC",
-		"COMPONENT_TEMPLATE" => ".default"
+		"SORT_ORDER2" => "ASC"
 	),
 	false
 );?>
@@ -457,8 +468,7 @@ $APPLICATION->SetTitle("Мебельная компания");
 						<div class="col-md-7 text-center">
 							<h2><br>
  </h2>
- <!--Меню Блог-->
-							 <!-- <$APPLICATION->IncludeComponent(
+							 <!--Меню Блог--> <!-- <$APPLICATION->IncludeComponent(
 	"bitrix:news.line",
 	"",
 	Array(
@@ -476,7 +486,8 @@ $APPLICATION->SetTitle("Мебельная компания");
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC"
 	)
-);?>--><h2>Our Blog</h2> 
+);?>-->
+							<h2>Our Blog</h2>
 						</div>
 					</div>
 					<div class="row">
@@ -518,8 +529,7 @@ $APPLICATION->SetTitle("Мебельная компания");
 					<div class="row mb-5 justify-content-center">
 						<div class="col-md-7">
 							<div class="site-section-title text-center">
-                        <!--Меню Агентов-->
-								<!-- <$APPLICATION->IncludeComponent(
+								 <!--Меню Агентов--> <!-- <$APPLICATION->IncludeComponent(
 	"bitrix:news.line", 
 	".default", 
 	array(
@@ -545,7 +555,7 @@ $APPLICATION->SetTitle("Мебельная компания");
 	),
 	false
 );?>-->
-<h2>Our Agents</h2>   
+								<h2>Our Agents</h2>
 							</div>
 						</div>
 					</div>
