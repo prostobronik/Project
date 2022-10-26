@@ -116,7 +116,8 @@ if (!defined ('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
         <div class="container py-1">
           <div class="row align-items-center">
             <div class="col-8 col-md-8 col-lg-4">
-            <h1 class=""><a href="index.html" class="h5 text-uppercase text-black"><strong><?$APPLICATION->IncludeComponent(
+            <h1 class=""><a href="index.php" class="h5 text-uppercase text-black"><strong>
+               <?$APPLICATION->IncludeComponent(
 	"bitrix:main.include",
 	"",
 	Array(
@@ -126,24 +127,34 @@ if (!defined ('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
 		"PATH" => "/include/logo.php"
 	)
 );?><span class="text-danger">.</span></strong></a></h1>
-            <!-- <$APPLICATION->IncludeComponent(
-	"bitrix:main.include", 
-	".default", 
-	array(
-		"AREA_FILE_SHOW" => "file",
-		"AREA_FILE_SUFFIX" => "inc",
-		"EDIT_TEMPLATE" => "",
-		"PATH" => "/include/logo.php",
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
-);?> -->
-            </div>
+</div>
             <div class="col-4 col-md-4 col-lg-8">
               <nav class="site-navigation text-right text-md-right" role="navigation">
-
                 <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+                <!-- <ul class="site-menu js-clone-nav d-none d-lg-block"> -->
+<?$APPLICATION->IncludeComponent(
+	"bitrix:menu",
+	"menu_home",
+	Array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "3",
+		"MENU_CACHE_GET_VARS" => array(0=>"",),
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"ROOT_MENU_TYPE" => "top",
+		"USE_EXT" => "N"
+	)
+);?>
+                <!-- </ul> -->
+              </nav>   
+            </div>
 
+            <!-- <div class="col-4 col-md-4 col-lg-8">
+              <nav class="site-navigation text-right text-md-right" role="navigation">
+                <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
                 <ul class="site-menu js-clone-nav d-none d-lg-block">
                   <li class="active">
                     <a href="index.html">Home</a>
@@ -156,8 +167,7 @@ if (!defined ('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                       <li><a href="#">Lease</a></li>
                       <li class="has-children">
                         <a href="#">Menu</a>
-                        <ul class="dropdown">
-                           
+                        <ul class="dropdown">    
                           <li><a href="#">Menu One</a></li>
                           <li><a href="#">Menu Two</a></li>
                           <li><a href="#">Menu Three</a></li>
@@ -169,31 +179,11 @@ if (!defined ('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
                   <li><a href="about.html">About</a></li>
                   <li><a href="contact.html">Contact</a></li>
                 </ul>
-              </nav>
-            </div>
+              </nav>   
+            </div> -->
             <!--Верхнее меню, размещать не нужно-->
-            <!-- <$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	".default", 
-	array(
-		"ALLOW_MULTI_SELECT" => "N",
-		"CHILD_MENU_TYPE" => "left",
-		"DELAY" => "N",
-		"MAX_LEVEL" => "1",
-		"MENU_CACHE_GET_VARS" => array(
-		),
-		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "N",
-		"MENU_CACHE_USE_GROUPS" => "Y",
-		"ROOT_MENU_TYPE" => "top",
-		"USE_EXT" => "N",
-		"COMPONENT_TEMPLATE" => ".default"
-	),
-	false
-);?> -->
-           
-
-          </div>
+            
+        </div>
         </div>
       </div>
     </div>

@@ -1,15 +1,8 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Компания", 
-		"company/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"Главная страница", 
-		"/glavnaya-stranitsa/", 
+		"/index.php", 
 		Array(), 
 		Array(), 
 		"" 
@@ -37,14 +30,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Личный кабинет ", 
-		"/lichnyy-kabinet-pokupatelya-/", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"Новости", 
-		"/o-servise/novosti/index.php", 
+		"/lichnyy-kabinet-pokupatelya/", 
 		Array(), 
 		Array(), 
 		"" 

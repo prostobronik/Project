@@ -28,41 +28,42 @@
                 <h3 class="footer-heading mb-4">Navigations</h3>
               </div>
               <div class="col-md-6 col-lg-6">
-                <ul class="list-unstyled">
+                <!-- <ul class="list-unstyled">
                   <li><a href="#">Home</a></li>
                   <li><a href="#">Buy</a></li>
                   <li><a href="#">Rent</a></li>
                   <li><a href="#">Properties</a></li>
-                </ul>
+                </ul> -->
+                <?$APPLICATION->IncludeComponent(
+	"bitrix:menu",
+	"bot-menu",
+	Array(
+		"ALLOW_MULTI_SELECT" => "N",
+		"CHILD_MENU_TYPE" => "left",
+		"COMPONENT_TEMPLATE" => ".default",
+		"DELAY" => "N",
+		"MAX_LEVEL" => "1",
+		"MENU_CACHE_GET_VARS" => "",
+		"MENU_CACHE_TIME" => "3600",
+		"MENU_CACHE_TYPE" => "N",
+		"MENU_CACHE_USE_GROUPS" => "Y",
+		"MENU_THEME" => "site",
+		"ROOT_MENU_TYPE" => "bottom",
+		"USE_EXT" => "N"
+	)
+);?>
               </div>
-              <div class="col-md-6 col-lg-6">
+              <!-- <div class="col-md-6 col-lg-6">
                 <ul class="list-unstyled">
                   <li><a href="#">About Us</a></li>
                   <li><a href="#">Privacy Policy</a></li>
                   <li><a href="#">Contact Us</a></li>
                   <li><a href="#">Terms</a></li>
                 </ul>
-              </div>
+              </div> -->
             </div>
             <!--Верхнее меню размещать не нужно-->
-            <!-- <$APPLICATION->IncludeComponent(
-	"bitrix:menu",
-	"",
-	Array(
-		"ALLOW_MULTI_SELECT" => "N",
-		"CHILD_MENU_TYPE" => "left",
-		"DELAY" => "N",
-		"MAX_LEVEL" => "1",
-		"MENU_CACHE_GET_VARS" => array(""),
-		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "N",
-		"MENU_CACHE_USE_GROUPS" => "Y",
-		"ROOT_MENU_TYPE" => "top",
-		"USE_EXT" => "N"
-	)
-);?> -->
-
-
+           
           </div>
 
           <div class="col-lg-4 mb-5 mb-lg-0">
